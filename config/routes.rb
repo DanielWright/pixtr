@@ -1,4 +1,6 @@
 Pixtr::Application.routes.draw do
+  root :to => 'clearance/sessions#new'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

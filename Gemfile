@@ -24,5 +24,5 @@ group :test, :cucumber do
   gem 'database_cleaner'
   gem 'timecop'
   gem 'launchy'
-  gem 'shoulda'
+  gem 'shoulda-matchers'
 end

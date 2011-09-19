@@ -1,10 +1,13 @@
 class GalleriesController < ApplicationController
+  before_filter :authorize, :only => [:new, :create]
+  
   def show
     @gallery = Gallery.find(params[:id])
   end
 
   def create
-    @gallery = current_user.galleries.new(params[:gallery])
+    @gallery = Gallery.new(params[:gallery])
+    # @gallery = current_user.galleries.new(params[:gallery])
     
     if @gallery.save
       flash[:notice] = "Gallery created successfully"

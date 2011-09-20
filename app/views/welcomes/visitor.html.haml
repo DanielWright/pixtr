@@ -1,0 +1,7 @@
+%h2 All galleries
+
+#all-galleries
+  - Gallery.all.each do |gallery|
+    .one-gallery{:id => "gallery-#{gallery.id}"}
+      %h3= gallery.title
+      .author= gallery.user.email

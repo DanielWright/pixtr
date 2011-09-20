@@ -6,8 +6,7 @@ class GalleriesController < ApplicationController
   end
 
   def create
-    @gallery = Gallery.new(params[:gallery])
-    # @gallery = current_user.galleries.new(params[:gallery])
+    @gallery = current_user.galleries.new(params[:gallery])
     
     if @gallery.save
       flash[:notice] = "Gallery created successfully"

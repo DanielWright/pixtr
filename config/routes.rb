@@ -3,5 +3,5 @@ Pixtr::Application.routes.draw do
   
   resources :galleries
   
-  root :to => 'clearance/sessions#new'
+  root :to => 'welcomes#visitor'
 end

@@ -4,7 +4,7 @@ FactoryGirl.define do
   end
 
   factory :gallery do
-    # user
+    user
     title { Factory.next :gallery_title }
   end
 
